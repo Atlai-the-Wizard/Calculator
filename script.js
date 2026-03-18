@@ -57,7 +57,7 @@ function calculate() {
     default:
       return;
   }
-  currentInput = result.toString();
+  currentInput = result.toFixed(7);
   currentOpertation = '';
   previousInput = '';
   document.querySelector('.display').textContent = currentInput;
