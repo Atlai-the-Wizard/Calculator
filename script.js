@@ -7,6 +7,19 @@ function appendNumber(number) {
   document.querySelector('.display').textContent = `${previousInput} ${currentOpertation} ${currentInput}`;
 }
 
+function appendDecimal(decimal) {
+  if (currentInput.includes('.')) {
+    return;
+  }
+  if (currentInput === '') {
+    currentInput = '0.';
+    document.querySelector('.display').textContent = `${previousInput} ${currentOpertation} ${currentInput}`;
+  } else {
+    currentInput += decimal;
+    document.querySelector('.display').textContent = `${previousInput} ${currentOpertation} ${currentInput}`;
+  }
+}
+
 function appendOperation(operation) {
   if (currentInput === '') return;
   if (previousInput !== '') {
